@@ -156,7 +156,7 @@ body #background{
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1rem;
     color: white !important;
 
@@ -167,7 +167,7 @@ body #background{
   border-bottom-right-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center !important;
+  justify-content:space-between !important;
   align-items: center !important;
 
 border: 1px solid red;
@@ -189,12 +189,12 @@ border: 1px solid red;
     padding: 1rem;
     border-radius: 8px;
     width: 100%;
-    max-width: 300px; /* exemplo de largura máxima */
+    max-width: 400px; /* exemplo de largura máxima */
     margin: 0.5rem;
  
   }
 
-  .card:hover {
+  .card {
 
     background-color: #151515;
     position: relative;
@@ -202,18 +202,18 @@ border: 1px solid red;
   }
 
 
-  .card .glow:hover::before , .glow:hover::after {
+  .card .glow::before , .glow::after {
 
     content:'';
     position: absolute;
-    left: -2px;
-    top: -2px;
+    left: -3px;
+    top: -3px;
     background: linear-gradient(45deg ,rgba(206, 217, 2, 0.859), 
     rgb(125, 104, 1), rgb(255, 115, 0),  transparent);
     background-size: 400%;
     border-radius: 10px !important;
-    width: calc(100% + 5px);
-    height: calc(100% + 5px);
+    width: calc(100% + 7px);
+    height: calc(100% + 7px);
     z-index: -1;
     animation: animate 15s linear infinite;
     
@@ -240,7 +240,7 @@ border: 1px solid red;
 
   }
 
-  .card .glow:hover::after {
+  .card .glow::after {
 
     filter: blur(20px);
     opacity: 0.5;
